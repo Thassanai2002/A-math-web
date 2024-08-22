@@ -1,1 +1,83 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0; /* ตั้งค่าเริ่มต้นของ margin ให้เป็น 0 */
+  padding: 0; /* ตั้งค่าเริ่มต้นของ padding ให้เป็น 0 */
+  box-sizing: border-box; /* ทำให้ padding และ border รวมอยู่ในขนาดขององค์ประกอบ */
+}
+
+.content {
+  margin: 1rem; /* ปรับระยะห่างตามต้องการ */
+  margin-bottom: 30px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center; /* จัดให้รูปภาพอยู่ตรงกลางแนวตั้ง */
+  margin-bottom: 30px;
+}
+
+.image-container img {
+  max-width: 100%; /* จัดให้รูปภาพมีขนาดไม่เกินขอบเขตของ container */
+  max-height: 100%; /* จัดให้รูปภาพมีขนาดไม่เกินขอบเขตของ container */
+  height: auto; /* ควบคุมให้สูงของรูปภาพปรับตามอัตราส่วนของตนเอง */
+  width: auto; /* ควบคุมความกว้างของรูปภาพปรับตามอัตราส่วนของตนเอง */
+}
+
+/* styles.scss */
+.large-input {
+  width: 100%;
+  height: 3rem; /* ปรับขนาดตามต้องการ */
+  border: 2px solid #6b6b6b; /* เพิ่มขอบสีแดง */
+  border-radius: 30px; /* เพิ่มความโค้งที่ขอบ */
+  padding: 0.5rem; /* เพิ่ม padding ภายใน */
+  font-size: 1.2rem; /* ปรับขนาดฟอนต์ตามต้องการ */
+  line-height: 2rem; /* ปรับ line-height ให้ฟอนต์ไม่เกินขอบ */
+  margin-top: 10px;
+  color: #6b6b6b; /* สีฟอนต์ปกติ สีดำ */
+}
+
+.large-input:focus {
+  background-color: #add8e6; /* สีพื้นหลังเมื่อถูก focus สีฟ้า */
+  border-color: #007bff; /* สีขอบเมื่อถูก focus สีฟ้า */
+  outline: none; /* เอาเส้นขอบของเบราเซอร์ออก */
+  color: #6b6b6b; /* สีฟอนต์เมื่อถูก focus สีดำ */
+}
+
+.large-label {
+  font-size: 1.2rem; /* ปรับขนาดฟอนต์ตามต้องการ */
+  color: #6b6b6b; /* สีฟอนต์ปกติ สีดำ */
+}
+
+.custom-button {
+  width: 100%; /* ปรับความกว้าง */
+  height: 3rem; /* ปรับขนาดตามต้องการ */
+  font-size: 1.3rem; /* ปรับขนาดฟอนต์ */
+  border-radius: 30px; /* เพิ่มความโค้งที่ขอบ */
+  justify-content: center; /* จัดปุ่มให้อยู่กลาง */
+}
+
+.custom-dialog .p-dialog {
+  border-radius: 30px; /* ปรับขอบให้โค้ง */
+}
+
+.dialog-content {
+  padding: 20px;
+  text-align: center; /* จัดข้อความและปุ่มให้อยู่กลาง */
+
+  .dialog-buttons {
+    display: flex;
+    justify-content: center; /* จัดปุ่มให้อยู่กลาง */
+    margin-top: 10px;
+  }
+
+  .custom-button {
+    flex: none;
+    height: 50%; /* ปรับขนาดตามต้องการ */
+    width: 50%;
+  }
+}

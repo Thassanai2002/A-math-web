@@ -1,0 +1,74 @@
+<div class="content">
+  <div class="image-container image-container img content">
+    <img src="assets/png/A-Math.png" />
+  </div>
+</div>
+
+<div class="content">
+  <form [formGroup]="form" class="flex flex-column">
+    <div class="content">
+      <label for="Username" class="large-label">Username</label><br />
+      <input
+        type="text"
+        pInputText
+        formControlName="Username"
+        class="large-input"
+      />
+      <br />
+    </div>
+
+    <div class="content">
+      <label for="Password" class="large-label">Password</label><br />
+      <input
+        type="text"
+        pInputText
+        formControlName="Password"
+        class="large-input"
+      />
+      <br />
+    </div>
+  </form>
+
+  <div class="content">
+    <button
+      pButton
+      type="button"
+      label="Sign In"
+      class="custom-button"
+      (click)="tohome()"
+    ></button>
+  </div>
+
+  <div class="content">
+    <button
+      pButton
+      type="button"
+      label="Sign Up"
+      class="custom-button"
+      [text]="true"
+      (click)="cancelModal = true"
+    ></button>
+  </div>
+</div>
+<!-- <p-dialog
+  [(visible)]="cancelModal"
+  [modal]="true"
+  [closable]="false"
+  [style]="{ width: '200px', minWidth: '200px' }"
+  class="custom-dialog"
+>
+  <ng-template pTemplate="content">
+    <div class="dialog-content">
+      <p>กรุณากรอกให้ครบ</p>
+      <div class="content">
+        <button
+          pButton
+          type="button"
+          label="ยืนยัน"
+          (click)="cancelModal = false"
+          class="custom-button"
+        ></button>
+      </div>
+    </div>
+  </ng-template>
+</p-dialog> -->
