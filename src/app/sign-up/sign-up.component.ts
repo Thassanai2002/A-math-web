@@ -3,11 +3,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.css'
 })
-export class LoginComponent {
+export class SignUpComponent {
+
   cancelModal = false;
   value: string | undefined;
   form: FormGroup;
@@ -17,6 +18,7 @@ export class LoginComponent {
     this.form = this.formBuilder.group({
       Username: [{ value: null, disabled: false }, Validators.required],
       Password: [{ value: null, disabled: false }, Validators.required],
+      repeatPassword: [{ value: null, disabled: false }, Validators.required],
     });
   }
 
@@ -24,18 +26,18 @@ export class LoginComponent {
 
   public chackDataAndback(): void {
     if (this.form.valid) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     } else {
       this.cancelModal = true;
     }
   }
 
-  public tohome(): void {
-    this.router.navigate(['/home']);
+  public toBack(): void {
+    this.router.navigate(['/login']);
 }
 
-public tosignup(): void {
-  this.router.navigate(['/signup']);
+public tologin(): void {
+  this.router.navigate(['/login']);
 }
 
   visible: boolean = false;
@@ -45,4 +47,5 @@ public tosignup(): void {
     this.position = 'center';
     this.visible = true;
   }
+
 }

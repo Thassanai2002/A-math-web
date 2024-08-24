@@ -27,17 +27,18 @@
       />
       <br />
     </div>
-  </form>
 
-  <div class="content">
-    <button
-      pButton
-      type="button"
-      label="Sign In"
-      class="custom-button"
-      (click)="tohome()"
-    ></button>
-  </div>
+    <div class="content">
+      <label for="repeatPassword" class="large-label">Repeat Password</label><br />
+      <input
+        type="text"
+        pInputText
+        formControlName="repeatPassword"
+        class="large-input"
+      />
+      <br />
+    </div>
+  </form>
 
   <div class="content">
     <button
@@ -45,11 +46,23 @@
       type="button"
       label="Sign Up"
       class="custom-button"
-      [text]="true"
-      (click)="tosignup()"
+      (click)="chackDataAndback()"
     ></button>
   </div>
+
+  <div class="content">
+    <button
+      pButton
+      type="button"
+      label="Back"
+      class="custom-button"
+      [text]="true"
+      (click)="toBack()"
+    ></button>
+  </div>
+
 </div>
+
 <!-- <p-dialog
   [(visible)]="cancelModal"
   [modal]="true"
