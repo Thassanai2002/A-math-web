@@ -22,7 +22,7 @@ export class LoginComponent {
 
   ngOnInit() {}
 
-  public chackDataAndback(): void {
+  public chackDataAndgohome(): void {
     if (this.form.valid) {
       this.router.navigate(['/home']);
     } else {
