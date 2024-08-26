@@ -1,1 +1,62 @@
-<p>home works!</p>
+<div class="content">
+  <div class="image-container image-container img content">
+    <img src="assets/png/A-Math.png" />
+  </div>
+</div>
+
+<div class="content">
+  <form [formGroup]="form" class="flex flex-column">
+    <div class="content">
+      <label for="PasswordRoom" class="large-label"></label><br />
+      <input
+        type="text"
+        pInputText
+        formControlName="Username"
+        class="large-input"
+      />
+      <br />
+    </div>
+  </form>
+
+  <div class="content">
+    <button
+      pButton
+      type="button"
+      label="Join"
+      class="custom-button"
+      (click)="Join()"
+    ></button>
+  </div>
+
+  <div class="content">
+    <button
+      pButton
+      type="button"
+      label="create"
+      class="custom-button"
+      (click)="create()"
+    ></button>
+  </div>
+
+  <div class="content">
+    <h2 style="padding: 10px 20px">My Stats</h2>
+    <table>
+      <tr>
+        <td style="padding: 0 20px">Average score per move</td>
+        <td style="padding: 0 20px">-</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 20px">Bingos</td>
+        <td style="padding: 0 20px">-</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 20px">Best final score</td>
+        <td style="padding: 0 20px">-</td>
+      </tr>
+      <tr>
+        <td style="padding: 0 20px">Best word</td>
+        <td style="padding: 0 20px">-</td>
+      </tr>
+    </table>
+  </div>
+</div>

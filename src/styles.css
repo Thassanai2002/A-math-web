@@ -13,6 +13,7 @@
 .content {
   margin: 1rem; /* ปรับระยะห่างตามต้องการ */
   margin-bottom: 30px;
+  justify-content: center; /* จัดปุ่มให้อยู่กลาง */
 }
 
 .image-container {
@@ -80,4 +81,31 @@
     height: 50%; /* ปรับขนาดตามต้องการ */
     width: 50%;
   }
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  width: 100%; /* ขนาดของตารางตามความกว้างของหน้าจอ */
+  height: 100vw; /* ขนาดของตารางตามความกว้างของหน้าจอ */
+  max-width: 100vw; /* กำหนดขนาดสูงสุดไม่เกินความสูงของหน้าจอ */
+  max-height: 100vw; /* กำหนดขนาดสูงสุดไม่เกินความสูงของหน้าจอ */
+  object-fit: cover; /* ปรับขนาดภาพให้พอดีกับพื้นที่โดยไม่บิดเบือน */
+}
+
+.tile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* สีพื้นหลังของไทล์ */
+  border: 1px solid #858585; /* ขอบของไทล์ */
+  font-size: calc(10px + 1vw); /* ขนาดตัวอักษรที่ปรับตามหน้าจอ */
+  justify-content: center; /* จัดปุ่มให้อยู่กลาง */
+
+}
+
+
+.tile.empty {
+  background-color: #fff;
 }

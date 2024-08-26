@@ -13,9 +13,13 @@ import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { GameBoardComponent } from './game-board/game-board.component';
+import { TableModule } from 'primeng/table';
+import { TileComponent } from './tile/tile.component';
+import { RoomComponent } from './room/room.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, SignUpComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, SignUpComponent, GameBoardComponent, TileComponent, RoomComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,6 +31,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ConfirmDialogModule,
     DialogModule,
     BrowserAnimationsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

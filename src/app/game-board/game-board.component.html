@@ -1,0 +1,5 @@
+<div class="game-board">
+  <div *ngFor="let cell of board" class="tile-container">
+    <app-tile [value]="cell.value ?? ''" [type]="cell.type"></app-tile>
+  </div>
+</div>
