@@ -1,0 +1,10 @@
+<div class="pieces">
+  <div
+    *ngFor="let piece of pieces"
+    class="piece"
+    draggable="true"
+    (dragstart)="onDragStart($event, piece)"
+  >
+    {{ piece }}
+  </div>
+</div>

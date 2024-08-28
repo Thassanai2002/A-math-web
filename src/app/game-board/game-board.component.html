@@ -1,5 +1,8 @@
-<div class="game-board">
-  <div *ngFor="let cell of board" class="tile-container">
-    <app-tile [value]="cell.value ?? ''" [type]="cell.type"></app-tile>
+<div class="game-board" (click)="onBoardClick($event)">
+  <div *ngFor="let cell of board; let i = index"
+       class="tile-container"
+       [style.top]="getTopPosition(i)"
+       [style.left]="getLeftPosition(i)"
+       (click)="onTileClick(i)">
   </div>
 </div>
