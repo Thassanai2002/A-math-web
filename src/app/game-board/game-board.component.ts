@@ -13,9 +13,25 @@ export class GameBoardComponent implements OnInit {
   }
 
   initializeBoard(): void {
-    // สร้างกระดานขนาด 15x15
     for (let i = 0; i < 15 * 15; i++) {
       this.board.push({ value: null, type: 'empty' });
     }
+  }
+
+  getTopPosition(index: number): string {
+    return `${Math.floor(index / 15) * (100 / 15)}%`;
+  }
+
+  getLeftPosition(index: number): string {
+    return `${(index % 15) * (100 / 15)}%`;
+  }
+
+  onTileClick(index: number): void {
+    console.log(`Tile ${index} clicked`);
+    // เพิ่มการประมวลผลเมื่อไทล์ถูกคลิก
+  }
+
+  onBoardClick(event: MouseEvent): void {
+    event.stopPropagation();
   }
 }

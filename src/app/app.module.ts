@@ -17,9 +17,10 @@ import { GameBoardComponent } from './game-board/game-board.component';
 import { TableModule } from 'primeng/table';
 import { TileComponent } from './tile/tile.component';
 import { RoomComponent } from './room/room.component';
+import { PiecesComponent } from './pieces/pieces.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HomeComponent, SignUpComponent, GameBoardComponent, TileComponent, RoomComponent],
+  declarations: [AppComponent, LoginComponent, HomeComponent, SignUpComponent, GameBoardComponent, TileComponent, RoomComponent, PiecesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
