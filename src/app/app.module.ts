@@ -18,6 +18,7 @@ import { TableModule } from 'primeng/table';
 import { TileComponent } from './tile/tile.component';
 import { RoomComponent } from './room/room.component';
 import { PiecesComponent } from './pieces/pieces.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, SignUpComponent, GameBoardComponent, TileComponent, RoomComponent, PiecesComponent],
@@ -32,7 +33,8 @@ import { PiecesComponent } from './pieces/pieces.component';
     ConfirmDialogModule,
     DialogModule,
     BrowserAnimationsModule,
-    TableModule
+    TableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

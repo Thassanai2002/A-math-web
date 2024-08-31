@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
   form: FormGroup;
   title = 'A-Math';
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginService) {
     this.form = this.formBuilder.group({
       Username: [{ value: null, disabled: false }, Validators.required],
       Password: [{ value: null, disabled: false }, Validators.required],
@@ -36,6 +37,12 @@ export class LoginComponent {
 
 public tosignup(): void {
   this.router.navigate(['/signup']);
+}
+
+public testapi(): void {
+  this.loginService.testapi().subscribe((data) => {
+    console.log(data);
+  })
 }
 
   visible: boolean = false;

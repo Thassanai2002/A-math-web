@@ -10,13 +10,12 @@
   box-sizing: border-box; /* ทำให้ padding และ border รวมอยู่ในขนาดขององค์ประกอบ */
 }
 
+
 .content {
-  display: flex; /* ใช้ flexbox เพื่อจัดตำแหน่ง */
   margin: 1rem; /* ปรับระยะห่างตามต้องการ */
   margin-bottom: 30px;
   justify-content: center; /* จัดปุ่มให้อยู่กลาง */
   justify-items: center;
-  text-align: center; /* จัดข้อความและปุ่มให้อยู่กลาง */
 }
 
 .image-container {
